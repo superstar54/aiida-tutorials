@@ -5,7 +5,7 @@ exclude: >
       .*tex
     )$
 repos:
-  - repo: git://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
     - id: check-yaml
@@ -13,14 +13,14 @@ repos:
     - id: trailing-whitespace
 
   -   repo: https://github.com/ambv/black
-      rev: 21.6b0
+      rev: '22.6.0'
       hooks:
       - id: black
         language_version: python3.8
 
   - repo: https://github.com/myint/rstcheck
-    rev: 'master'
+    rev: v6.1.0
     hooks:
     - id: rstcheck
       additional_dependencies:
-        - sphinx==2.4.4
+        - sphinx==4.1.2
